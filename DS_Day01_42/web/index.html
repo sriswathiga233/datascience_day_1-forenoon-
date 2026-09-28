@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SOCIAL PULSE — Social Media & Brand Analytics</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <h1>SOCIAL PULSE</h1>
+          <p>Social Media & Brand Analytics</p>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#sentiment">Sentiment</a></li>
+            <li><a href="#topics">Topics</a></li>
+            <li><a href="#engagement">Engagement</a></li>
+            <li><a href="#trends">Trends</a></li>
+            <li><a href="#ml">ML Model</a></li>
+            <li><a href="#insights">Insights & Actions</a></li>
+          </ul>
+        </nav>
+        <div class="footer">&copy; SOCIAL PULSE</div>
+      </aside>
+
+      <main class="main">
+        <header class="hero">
+          <div>
+            <h2>What Are People Talking About?</h2>
+            <p class="lead">Analyze social-media conversations, sentiment, engagement and emerging discussion trends.</p>
+          </div>
+          <div class="hero-actions">
+            <button class="btn">Export Report</button>
+          </div>
+        </header>
+
+        <section id="overview" class="section container">
+          <h3>Overview</h3>
+          <div class="kpis">
+            <div class="kpi">
+              <div class="kpi-label">Clean Posts</div>
+              <div class="kpi-value">161,465</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-label">Unique Texts</div>
+              <div class="kpi-value">89,162</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-label">Neutral Sentiment</div>
+              <div class="kpi-value">43.3%</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-label">Naive Bayes Accuracy</div>
+              <div class="kpi-value">77.85%</div>
+            </div>
+          </div>
+
+          <div class="kpis">
+            <div class="kpi small">
+              <div class="kpi-label">Mean Engagement</div>
+              <div class="kpi-value">2,808</div>
+            </div>
+            <div class="kpi small">
+              <div class="kpi-label">Median Engagement</div>
+              <div class="kpi-value">20</div>
+            </div>
+            <div class="kpi small">
+              <div class="kpi-label">Max Engagement</div>
+              <div class="kpi-value">169,247</div>
+            </div>
+            <div class="kpi small">
+              <div class="kpi-label">Top Discussion Phrase</div>
+              <div class="kpi-value">climate change</div>
+            </div>
+            <div class="kpi small">
+              <div class="kpi-label">Top Phrase Frequency</div>
+              <div class="kpi-value">30,154</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="sentiment" class="section container">
+          <h3>Sentiment</h3>
+          <div class="grid two">
+            <div class="card">
+              <img src="../plots/viz1_sentiment_distribution.png" alt="Sentiment distribution">
+            </div>
+            <div class="card">
+              <img src="../plots/diagnostic_pos_neg_topic_comparison.png" alt="Pos vs Neg topics">
+            </div>
+          </div>
+          <div class="sentiment-breakdown">
+            <div class="pill">Neutral: 43.3%</div>
+            <div class="pill">Positive: 31.5%</div>
+            <div class="pill">Negative: 25.2%</div>
+          </div>
+        </section>
+
+        <section id="topics" class="section container">
+          <h3>Topics</h3>
+          <div class="grid two">
+            <div class="card">
+              <img src="../plots/viz2_top_discussion_topics.png" alt="Top topics">
+            </div>
+            <div class="card">
+              <h4>Top Discussion Terms and Phrases</h4>
+              <ul class="terms">
+                <li>climate change</li>
+                <li>global warming</li>
+                <li>science</li>
+                <li>earth</li>
+                <li>scientists</li>
+                <li>planet</li>
+                <li>environment</li>
+                <li>water</li>
+                <li>future</li>
+                <li>heat</li>
+                <li>health</li>
+                <li>coal</li>
+                <li>environmental</li>
+                <li>study</li>
+                <li>arctic</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="engagement" class="section container">
+          <h3>Engagement</h3>
+          <div class="grid two">
+            <div class="card">
+              <img src="../plots/viz3_topic_engagement.png" alt="Topic engagement">
+            </div>
+            <div class="card">
+              <h4>Highlights</h4>
+              <p><strong>coal</strong><br>Median engagement = 8</p>
+              <p><strong>planet</strong><br>Median engagement = 7</p>
+              <p><strong>scientists</strong><br>Median engagement = 6</p>
+              <p class="muted">Mean engagement = 2,808 — Median = 20, indicating strong right-skew caused by highly engaged posts.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="trends" class="section container">
+          <h3>Trends</h3>
+          <div class="grid two">
+            <div class="card">
+              <img src="../plots/viz4_topic_trends_over_time.png" alt="Topic trends over time">
+            </div>
+            <div class="card">
+              <h4>Observed surge (week of 2018-08-13)</h4>
+              <ul>
+                <li><strong>climate change:</strong> 7,073 posts — baseline 328 — z-score 139.02 — increase +2,056%</li>
+                <li><strong>global warming:</strong> 1,644 posts — baseline 78 — z-score 131.42</li>
+                <li><strong>science:</strong> 411 posts — baseline 19.8 — z-score 61.17</li>
+                <li><strong>earth:</strong> 467 posts — baseline 26.8 — z-score 28.56</li>
+              </ul>
+              <p class="muted">These are observed unusual surges in discussion volume; no causal claims are made.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="ml" class="section container">
+          <h3>ML Model</h3>
+          <div class="grid two">
+            <div class="card">
+              <img src="../plots/confusion_matrix.png" alt="Confusion matrix">
+            </div>
+            <div class="card">
+              <h4>Model results</h4>
+              <p><strong>Model:</strong> Multinomial Naive Bayes</p>
+              <p><strong>Features:</strong> TF-IDF</p>
+              <p><strong>Accuracy:</strong> 77.85%</p>
+              <p><strong>Macro F1:</strong> 0.7771</p>
+              <p><strong>Weighted F1:</strong> 0.7774</p>
+              <p class="muted">TF-IDF converts text into numerical features, while Multinomial Naive Bayes uses those features to classify sentiment.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="insights" class="section container">
+          <h3>Insights & Actions</h3>
+          <div id="insights-cards" class="cards"></div>
+          <h4>Action Plan</h4>
+          <div id="actions" class="cards"></div>
+        </section>
+
+        <footer class="site-footer">
+          <div>Generated from verified DS_Day01_42 results</div>
+        </footer>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  </html>

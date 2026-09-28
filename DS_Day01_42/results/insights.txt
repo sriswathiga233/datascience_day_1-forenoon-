@@ -1,0 +1,62 @@
+DS_Day01_42 - KEY INSIGHTS & ACTION PLAN
+============================================================
+
+KEY INSIGHTS
+----------------------------------------
+
+Insight 1: Neutral Sentiment Dominates the Conversation
+Finding  : Neutral posts make up 43.3% of all discussions.
+Evidence : 69,964 out of 161,465 posts are Neutral.
+Meaning  : Most users are sharing information or observing rather than expressing strong opinions. This is an opportunity for the brand to shape the narrative proactively.
+
+Insight 2: Engagement is Highly Skewed - A Few Posts Drive Most Reach
+Finding  : Mean engagement (2,808) is far above median (20).
+Evidence : Max engagement: 169,247. Median: 20.0.
+Meaning  : A small number of viral posts dominate total reach. Brands should identify what makes those posts go viral and replicate it.
+
+Insight 3: 'climate change' is the Most Discussed Topic
+Finding  : The term 'climate change' appears in 30,154 posts.
+Evidence : Frequency rank #1 among all extracted topics.
+Meaning  : This is the core subject of the conversation. Brand messaging and content strategy should directly address this topic.
+
+Insight 4: Positive and Negative Discussions Focus on Different Themes
+Finding  : Positive posts are associated with: ['global warming', 'energy', 'important']. Negative posts are associated with: ['threat', 'science', 'problem'].
+Evidence : TF-IDF distinctiveness analysis across Positive vs Negative subsets.
+Meaning  : Negative discussions signal specific pain points or controversies. Positive discussions reveal what resonates - these themes can be amplified.
+
+Insight 5: 'coal' Generates the Highest Median Engagement
+Finding  : Posts about 'coal' have a median engagement of 8 (unique posts, deduplicated).
+Evidence : Topic engagement analysis across 15 topics using deduplicated post corpus (89,162 unique texts).
+Meaning  : High-engagement topics are where the audience is most active. Prioritising content around these topics maximises organic reach.
+
+Insight 6: Sudden Spike Detected for 'climate change'
+Finding  : Week of 2018-08-13: 7073 posts vs baseline of 328.0.
+Evidence : Z-score: 139.02 | Increase: 2056.4%
+Meaning  : An unusual surge in discussion volume is a signal worth monitoring. Brands should track these moments and prepare rapid-response content in case the topic resurfaces.
+
+Insight 7: Naive Bayes Achieves 77.8% Accuracy on Sentiment Classification
+Finding  : The model correctly classifies 77.8% of unseen tweets.
+Evidence : Macro F1: 0.7771 | Weighted F1: 0.7774
+Meaning  : An automated sentiment classifier at this accuracy can process thousands of new posts daily, enabling real-time brand monitoring at scale.
+
+
+PRACTICAL ACTION PLAN
+----------------------------------------
+
+[HIGH] Action 1: Monitor and respond to negative discussions
+Detail: Negative posts cluster around: ['climate change', 'trump', 'threat', 'science', 'risk']. Set up real-time alerts for these terms and assign a response team.
+
+[HIGH] Action 2: Amplify high-engagement topics in brand content
+Detail: 'coal' has the highest median engagement of 8. Top 3 topics by median engagement: ['coal', 'planet', 'scientists']. Create original content around these themes to maximise organic reach.
+
+[MEDIUM] Action 3: Leverage positive discussion themes for marketing
+Detail: Positive discussions focus on: ['climate change', 'global warming', 'trump', 'science', 'important']. Use these themes in campaigns, testimonials, and social proof content.
+
+[MEDIUM] Action 4: Prepare rapid-response playbooks for surge topics
+Detail: Topics with detected unusual surges: ['climate change', 'global warming', 'science']. Pre-draft content and responses so the brand can react quickly if discussion volume spikes again on these themes.
+
+[MEDIUM] Action 5: Deploy the Naive Bayes classifier for automated monitoring
+Detail: The trained model can classify incoming tweets in real time. Integrate it into a dashboard to track daily sentiment shifts.
+
+[LOW] Action 6: Engage the neutral majority to shift sentiment
+Detail: 43.3% of posts are neutral. Targeted engagement (replies, polls, informative threads) can convert neutral observers into positive advocates.

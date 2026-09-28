@@ -1,0 +1,21 @@
+NAIVE BAYES MODEL RESULTS
+==================================================
+Training samples : 129,172
+Test samples     : 32,293
+TF-IDF features  : 20,000
+
+Accuracy         : 0.7785 (77.85%)
+
+Classification Report:
+              precision    recall  f1-score   support
+
+    Negative     0.8891    0.6652    0.7610      8143
+     Neutral     0.7650    0.7771    0.7710     13993
+    Positive     0.7383    0.8712    0.7993     10157
+
+    accuracy                         0.7785     32293
+   macro avg     0.7975    0.7712    0.7771     32293
+weighted avg     0.7879    0.7785    0.7774     32293
+
+Macro    - Precision: 0.7975  Recall: 0.7712  F1: 0.7771
+Weighted - Precision: 0.7879  Recall: 0.7785  F1: 0.7774
